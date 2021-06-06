@@ -13,13 +13,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.container {
-  max-width: 600px;
-  margin: 30px auto;
-  overflow: auto;
-  min-height: 300px;
-  border: 1px solid royalblue;
-  padding: 30px;
-  border-radius: 10px;
-}
