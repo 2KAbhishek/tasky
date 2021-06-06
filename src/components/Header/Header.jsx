@@ -12,7 +12,7 @@ const Header = ({title}) => {
   return (
     <header className="Header">
       <h1>{title}</h1>
-      <Button/>
+      <Button color={'#1688f0'} text={'Add'}/>
     </header>
   );
 };
