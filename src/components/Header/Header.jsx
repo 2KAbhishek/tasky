@@ -4,15 +4,18 @@ import Button from '../Button/Button';
 
 /**
  * App header component
- *
  * @param {*} {title}
  * @return {*}
  */
 const Header = ({title}) => {
+  const onClick = (e) => {
+    console.log(e.target);
+  };
+
   return (
     <header className="Header">
       <h1>{title}</h1>
-      <Button color={'#1688f0'} text={'Add'}/>
+      <Button color={'#1688f0'} text={'Add'} onClick={onClick}/>
     </header>
   );
 };
