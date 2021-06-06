@@ -2,6 +2,12 @@ import PropTypes from 'prop-types';
 import './Header.css';
 import Button from '../Button/Button';
 
+/**
+ * App header component
+ *
+ * @param {*} {title}
+ * @return {*}
+ */
 const Header = ({title}) => {
   return (
     <header className="Header">
