@@ -8,7 +8,7 @@ import Tasks from '../Tasks/Tasks';
  * @return {*}
  */
 const App = () => {
-  const [tasks] = useState([
+  const [tasks, setTasks] = useState([
     {
       id: 1,
       text: 'Build Projects',
