@@ -1,19 +1,21 @@
-const tasks = [
-  {
-    id: 1,
-    text: 'Build Projects',
-    day: 'June 10',
-    reminder: false,
-  },
-  {
-    id: 2,
-    text: 'Add to portfolio',
-    day: 'June 17',
-    reminder: true,
-  },
-];
+import {useState} from 'react';
 
 const Tasks = () => {
+  const [tasks, setTasks] = useState([
+    {
+      id: 1,
+      text: 'Build Projects',
+      day: 'June 13th',
+      reminder: false,
+    },
+    {
+      id: 2,
+      text: 'Add to portfolio',
+      day: 'June 16th',
+      reminder: true,
+    },
+  ]);
+
   return (
     <>
       {tasks.map((task) => (
