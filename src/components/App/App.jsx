@@ -30,7 +30,9 @@ const App = () => {
   return (
     <div className="App">
       <Header title={'Tasky'}/>
-      <Tasks tasks={tasks} onDelete={deleteTask}/>
+      {tasks.length > 0 ?
+      (<Tasks tasks={tasks} onDelete={deleteTask}/>) :
+      (<h3>No Tasks!</h3>)}
     </div>
   );
 };
