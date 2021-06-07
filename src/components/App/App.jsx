@@ -23,7 +23,7 @@ const App = () => {
     },
   ]);
 
-  const deleteTask = () => {
+  const deleteTask = (id) => {
     console.log('delete', id);
   };
 
