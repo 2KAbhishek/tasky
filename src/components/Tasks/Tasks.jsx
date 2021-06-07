@@ -1,21 +1,6 @@
-import {useState} from 'react';
+import PropTypes from 'prop-types';
 
-const Tasks = () => {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: 'Build Projects',
-      day: 'June 13th',
-      reminder: false,
-    },
-    {
-      id: 2,
-      text: 'Add to portfolio',
-      day: 'June 16th',
-      reminder: true,
-    },
-  ]);
-
+const Tasks = ({tasks}) => {
   return (
     <>
       {tasks.map((task) => (
@@ -23,6 +8,10 @@ const Tasks = () => {
       ))}
     </>
   );
+};
+
+Tasks.propTypes = {
+  tasks: PropTypes.array,
 };
 
 export default Tasks;
