@@ -1,8 +1,9 @@
 .Task {
     background: #f0f0f0;
-    margin: 5px;
+    margin: 10px 5px;
     padding: 10px 20px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .Task.reminder {
