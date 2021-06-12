@@ -2,6 +2,7 @@ import {useState} from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import Tasks from '../Tasks/Tasks';
+import AddTask from '../AddTask/AddTask';
 
 /**
  * Main app component
@@ -35,6 +36,7 @@ const App = () => {
   return (
     <div className="App">
       <Header title={'Tasky'}/>
+      <AddTask/>
       {tasks.length > 0 ?
       (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) :
       (<h3>No Tasks!</h3>)}
