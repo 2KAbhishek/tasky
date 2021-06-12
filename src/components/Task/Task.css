@@ -7,11 +7,15 @@
 }
 
 .Task.reminder {
-    border-left: 5px solid green;
+    border-left: 5px solid rgb(35, 245, 35);
 }
 
 .Task h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.Task:active {
+    transform: scale(0.98);
 }
