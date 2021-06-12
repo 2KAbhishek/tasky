@@ -6,10 +6,10 @@ import './Button.css';
  * @param {*} {color, text, onClick}
  * @return {*}
  */
-const Button = ({color, text, onClick}) => {
+const Button = ({color, text, type, width, onClick}) => {
   return (
-    <button className="Button" style={{backgroundColor: color}}
-      onClick={onClick}> {text}
+    <button className="Button" style={{backgroundColor: color, width: width}}
+      onClick={onClick} type={type} > {text}
     </button>
   );
 };
@@ -22,6 +22,8 @@ Button.defaultProps = {
 Button.propTypes = {
   color: PropTypes.string,
   text: PropTypes.string,
+  type: PropTypes.string,
+  width: PropTypes.string,
   onClick: PropTypes.func,
 };
 
