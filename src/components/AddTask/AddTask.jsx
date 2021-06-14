@@ -15,7 +15,7 @@ const AddTask = () => {
         <input type="checkbox" name="" id="reminder" />
       </div>
 
-      <Button color={'#0DBC79'} text={'Save'} type={'submit'}
+      <Button color={'#1688f0'} text={'Save'} type={'submit'}
         width= {'98%'}/>
     </form>
   );
