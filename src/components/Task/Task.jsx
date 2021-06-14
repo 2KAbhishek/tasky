@@ -1,15 +1,22 @@
 import PropTypes from 'prop-types';
 import './Task.css';
-import {FaTrash} from 'react-icons/fa';
+
+import {FaCheck, FaTrash} from 'react-icons/fa';
 
 const Task = ( {task, onDelete, onToggle} ) => {
   return (
     <div className={`Task ${task.reminder ? 'reminder' : ''}`}
       onDoubleClick={() => onToggle(task.id)}>
-      <h3>{task.text}
+      <div className="row">
+        <h3>{task.text}</h3>
+        <FaCheck onClick={() => onToggle(task.id)}
+          style = {{color: 'green', cursor: 'pointer'}}/>
+      </div>
+      <div className="row">
+        <p>{task.day}</p>
         <FaTrash onClick={() => onDelete(task.id)}
-          style = {{color: 'red', cursor: 'pointer'}}/></h3>
-      <p>{task.day}</p>
+          style = {{color: 'red', cursor: 'pointer'}}/>
+      </div>
     </div>
   );
 };
