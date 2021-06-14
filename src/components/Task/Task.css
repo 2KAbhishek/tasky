@@ -4,6 +4,8 @@
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .Task.reminder {
