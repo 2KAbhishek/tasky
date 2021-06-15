@@ -13,7 +13,7 @@ const Task = ( {task, onDelete, onToggle} ) => {
           style = {{color: 'green', cursor: 'pointer'}}/>
       </div>
       <div className="row">
-        <p>{task.day}</p>
+        <p>{task.time}</p>
         <FaTrash onClick={() => onDelete(task.id)}
           style = {{color: 'red', cursor: 'pointer'}}/>
       </div>

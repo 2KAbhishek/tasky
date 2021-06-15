@@ -13,13 +13,13 @@ const App = () => {
     {
       id: 1,
       text: 'Build Projects',
-      day: 'June 13th',
+      time: 'June 13th',
       done: false,
     },
     {
       id: 2,
       text: 'Add to portfolio',
-      day: 'June 16th',
+      time: 'June 16th',
       done: true,
     },
   ]);
