@@ -11,7 +11,7 @@ const AddTask = () => {
         <label htmlFor="Date"></label>
         <input type="datetime-local" name="Date" id="date" />
       </div>
-      <Button color={'#1688f0'} text={'Save'} type={'submit'}
+      <Button text={'Save'} type={'submit'}
         width= {'98%'}/>
     </form>
   );

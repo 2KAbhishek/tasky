@@ -15,7 +15,7 @@ const Header = ({title}) => {
   return (
     <header className="Header">
       <h1>{title}</h1>
-      <Button color={'#1688f0'} text={'Add'} onClick={onClick}/>
+      <Button text={'Add'} onClick={onClick}/>
     </header>
   );
 };
