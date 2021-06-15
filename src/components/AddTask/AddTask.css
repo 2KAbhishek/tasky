@@ -1,0 +1,11 @@
+input {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border: 2px groove;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 98%;
+    font-family: inherit;
+    background-color: aliceblue;
+}
