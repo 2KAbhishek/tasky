@@ -5,7 +5,7 @@
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid royalblue;
+  border: 2px dashed #1688f0;
   padding: 30px;
   border-radius: 10px;
 }
