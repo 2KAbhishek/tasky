@@ -14,13 +14,13 @@ const App = () => {
       id: 1,
       text: 'Build Projects',
       day: 'June 13th',
-      reminder: false,
+      done: false,
     },
     {
       id: 2,
       text: 'Add to portfolio',
       day: 'June 16th',
-      reminder: true,
+      done: true,
     },
   ]);
 
@@ -28,9 +28,9 @@ const App = () => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const toggleReminder = (id) => {
+  const toggleDone = (id) => {
     setTasks(tasks.map((task) => task.id === id ?
-     {...task, reminder: !task.reminder} : task));
+     {...task, done: !task.done} : task));
   };
 
   return (
@@ -38,7 +38,7 @@ const App = () => {
       <Header title={'Tasky'}/>
       <AddTask/>
       {tasks.length > 0 ?
-      (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) :
+      (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleDone}/>) :
       (<h3>No Tasks!</h3>)}
     </div>
   );

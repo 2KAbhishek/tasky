@@ -5,7 +5,7 @@ import {FaCheck, FaTrash} from 'react-icons/fa';
 
 const Task = ( {task, onDelete, onToggle} ) => {
   return (
-    <div className={`Task ${task.reminder ? 'reminder' : ''}`}
+    <div className={`Task ${task.done ? 'done' : ''}`}
       onDoubleClick={() => onToggle(task.id)}>
       <div className="row">
         <h3>{task.text}</h3>
