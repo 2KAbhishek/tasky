@@ -1,3 +1,4 @@
+import './AddTask.css';
 import Button from '../Button/Button';
 const AddTask = () => {
   return (
