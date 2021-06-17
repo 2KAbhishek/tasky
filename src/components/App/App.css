@@ -1,9 +1,9 @@
 .App {
-  width: clamp(200px, 90%, 800px);
-  margin: 30px auto;
-  overflow: auto;
-  min-height: 300px;
-  border: 2px dashed #1688f0;
-  padding: 30px;
-  border-radius: 10px;
+    width: clamp(200px, 90%, 800px);
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 2px dashed #1688f0;
+    padding: 30px;
+    border-radius: 10px;
 }
