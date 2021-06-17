@@ -1,7 +1,5 @@
 .App {
-  max-width: 800px;
-  min-width: none;
-  width: 90vw;
+  width: clamp(200px, 90%, 800px);
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
