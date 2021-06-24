@@ -2,6 +2,7 @@
   "name": "tasky",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://2kabhishek.github.io/tasky",
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
