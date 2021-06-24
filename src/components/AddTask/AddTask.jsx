@@ -1,12 +1,31 @@
 import {useState} from 'react';
+import PropTypes from 'prop-types';
+
 import './AddTask.css';
 import Button from '../Button/Button';
 
-const AddTask = () => {
+const AddTask = ({onSave}) => {
   const [text, setText] = useState('');
   const [time, setTime] = useState('');
+  const [done, setDone] = useState(false);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (!text) {
+      alert('Please enter some text.');
+      return;
+    }
+
+    onSave({text, time, done});
+
+    setText('');
+    setTime('');
+    setDone(false);
+  };
+
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="form-input">
         <label htmlFor="Task"></label>
         <input type="text" name="Task" placeholder="Add Task"
