@@ -24,6 +24,12 @@ const App = () => {
     },
   ]);
 
+  const saveTask = (task) => {
+    const id = tasks.length + 1;
+    const newTask = {id, ...task};
+    setTasks([...tasks, newTask]);
+  };
+
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
@@ -36,7 +42,7 @@ const App = () => {
   return (
     <div className="App">
       <Header title={'Tasky'}/>
-      <AddTask/>
+      <AddTask onSave={saveTask}/>
       {tasks.length > 0 ?
       (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleDone}/>) :
       (<h3>No Tasks!</h3>)}
