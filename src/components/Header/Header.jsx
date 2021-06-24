@@ -7,20 +7,19 @@ import Button from '../Button/Button';
  * @param {*} {title}
  * @return {*}
  */
-const Header = ({title}) => {
-  const onClick = (e) => {
-    console.log(e.target);
-  };
-
+const Header = ({title, onAdd}) => {
   return (
     <header className="Header">
       <h1>{title}</h1>
-      <Button text={'Add'} onClick={onClick}/>
+      <Button text={'Add'} onClick={onAdd}/>
     </header>
   );
 };
 
 Header.defaultProps = {title: 'Tasky'};
-Header.propTypes = {title: PropTypes.string.isRequired};
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  onAdd: PropTypes.func,
+};
 
 export default Header;
