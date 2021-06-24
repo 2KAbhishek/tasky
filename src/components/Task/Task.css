@@ -20,13 +20,19 @@
 .row {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .Task h3 {
     font-weight: 400;
+    font-size: 1.2em;
 }
 
 .Task.done h3 {
     font-style: italic;
     text-decoration: line-through;
+}
+
+.Task p {
+    font-size: .9em;
 }
