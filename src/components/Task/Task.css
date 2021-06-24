@@ -1,11 +1,12 @@
 .Task {
-    background: #f0f0f0;
+    background: #d8d8d8;
     margin: 10px 5px;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    line-height: 2.25em;
 }
 
 .Task.done {
