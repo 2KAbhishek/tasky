@@ -10,12 +10,12 @@ const Task = ( {task, onDelete, onToggle} ) => {
       <div className="row">
         <h3>{task.text}</h3>
         <FaCheck onClick={() => onToggle(task.id)}
-          style = {{color: 'green', cursor: 'pointer'}}/>
+          size={20} style = {{color: '#0DBC79', cursor: 'pointer'}}/>
       </div>
       <div className="row">
         <p>{task.time}</p>
         <FaTrash onClick={() => onDelete(task.id)}
-          style = {{color: 'red', cursor: 'pointer'}}/>
+          size= {20} style = {{color: '#EC231C', cursor: 'pointer'}}/>
       </div>
     </div>
   );
