@@ -42,4 +42,8 @@ const AddTask = ({onSave}) => {
   );
 };
 
+AddTask.propTypes = {
+  onSave: PropTypes.func,
+};
+
 export default AddTask;
