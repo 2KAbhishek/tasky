@@ -13,19 +13,28 @@ const App = () => {
     {
       id: 1,
       text: 'Build Projects',
-      time: 'June 13th',
+      time: 'Sun Jun 24 2021, 08:03:00 PM',
       done: false,
     },
     {
       id: 2,
       text: 'Add to portfolio',
-      time: 'June 16th',
+      time: 'Wed Jun 16 2021, 10:03:00 AM',
       done: true,
     },
   ]);
 
   const saveTask = (task) => {
     const id = tasks.length + 1;
+
+    // Added for datetime input to string, firefox doesn't support datetime
+    const date = new Date(task.time);
+    let timeStr = task.time;
+    if (date.toDateString() !== 'Invalid Date') {
+      timeStr = date.toDateString() + ', ' + date.toLocaleTimeString();
+    }
+    task.time = timeStr;
+
     const newTask = {id, ...task};
     setTasks([...tasks, newTask]);
   };
