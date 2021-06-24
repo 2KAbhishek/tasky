@@ -51,7 +51,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header title={'Tasky'} onAdd={() => setShowForm(!showForm)}/>
+      <Header title={'Tasky'} onAdd={() => setShowForm(!showForm)}
+        showForm={showForm}/>
       {showForm && <AddTask onSave={saveTask}/>}
       {tasks.length > 0 ?
       (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleDone}/>) :
