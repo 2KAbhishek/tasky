@@ -10,20 +10,7 @@ import AddTask from '../AddTask/AddTask';
  */
 const App = () => {
   const [showForm, setShowForm] = useState(false);
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: 'Build Projects',
-      time: 'Sun Jun 24 2021, 08:03:00 PM',
-      done: false,
-    },
-    {
-      id: 2,
-      text: 'Add to portfolio',
-      time: 'Wed Jun 16 2021, 10:03:00 AM',
-      done: true,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const saveTask = (task) => {
     const id = tasks.length + 1;
@@ -56,7 +43,7 @@ const App = () => {
       {showForm && <AddTask onSave={saveTask}/>}
       {tasks.length > 0 ?
       (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleDone}/>) :
-      (<h3>No Tasks!</h3>)}
+      (<h2>No Tasks!</h2>)}
     </div>
   );
 };
