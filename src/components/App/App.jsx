@@ -22,8 +22,8 @@ const App = () => {
     fetchTasks();
   }, []);
 
-  const saveTask = (task) => {
-    const id = tasks.length + 1;
+  const saveTask = async (task) => {
+    // const id = tasks.length + 1;
 
     // Added for datetime input to string, firefox doesn't support datetime
     const date = new Date(task.time);
@@ -33,8 +33,21 @@ const App = () => {
     }
     task.time = timeStr;
 
-    const newTask = {id, ...task};
-    setTasks([...tasks, newTask]);
+    const newTask = {...task};
+
+    // Add to server
+    const res = await fetch('http://localhost:5432/tasks',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newTask),
+        });
+
+    const serverTask = await res.json();
+
+    setTasks([...tasks, serverTask]);
   };
 
   const deleteTask = async (id) => {
