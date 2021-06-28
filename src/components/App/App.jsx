@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import Tasks from '../Tasks/Tasks';
@@ -11,6 +11,16 @@ import AddTask from '../AddTask/AddTask';
 const App = () => {
   const [showForm, setShowForm] = useState(false);
   const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const res = await fetch('http://localhost:5432/tasks');
+      const data = await res.json();
+      setTasks(data);
+    };
+
+    fetchTasks();
+  }, []);
 
   const saveTask = (task) => {
     const id = tasks.length + 1;
