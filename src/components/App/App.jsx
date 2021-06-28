@@ -57,9 +57,30 @@ const App = () => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const toggleDone = (id) => {
+  const toggleDone = async (id) => {
+    const fetchTask = async (id) => {
+      const res = await fetch(`http://localhost:5432/tasks/${id}`);
+      const data = await res.json();
+      return (data);
+    };
+
+    const curTask = await fetchTask(id);
+    const updTask = {...curTask, done: !curTask.done};
+
+    const res = await fetch(`http://localhost:5432/tasks/${id}`,
+        {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(updTask),
+        });
+
+    const toggledTask = await res.json();
+
+
     setTasks(tasks.map((task) => task.id === id ?
-     {...task, done: !task.done} : task));
+     {...task, done: toggledTask.done} : task));
   };
 
   return (
