@@ -41,10 +41,6 @@ A task manager built with React, can be integrated with any Backend.
 
 Needed a frontend component to test different backends.
 
-## What it does
-
-tasky is a web app that lets you manage your tasks.
-
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
