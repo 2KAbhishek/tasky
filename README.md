@@ -26,12 +26,13 @@
 <h3>Task management with React ✅📋</h3>
 
 <figure>
-  <img src= "https://raw.githubusercontent.com/2KAbhishek//master/images/screenshot.jpg" alt=" Demo" style="width:100%">
+  <img src= "images/screenshot.png" alt=" Demo" style="width:100%">
   <br/>
-  <figcaption> Screenshot</figcaption>
+  <figcaption>tasky Screenshot</figcaption>
 </figure>
 
 </div>
+
 ## What is this
 
 A task manager built with React, can be integrated with any Backend.
